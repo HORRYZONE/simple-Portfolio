@@ -1,0 +1,257 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.background-container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #171717;
+  overflow-y: auto;
+}
+
+.left-container {
+  width: calc(20% - 1rem);
+  height: auto;
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  margin-right: 1rem;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.image-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 25px;
+  overflow: hidden;
+  background-color: #585855;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.name-title {
+  margin-top: 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #e8e8e8;
+  text-align: center;
+  letter-spacing: 3%;
+}
+
+.role-container {
+  background-color: #6c6c6c;
+  border-radius: 15px;
+  padding: 0.01rem 1rem;
+  margin-top: 0.1rem;
+  text-align: center;
+}
+
+.role-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #e8e8e8;
+}
+
+.divider {
+  height: 1px;
+  width: 15rem;
+  background-color: #6c6c6c;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-container-wrapper {
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  color: #e8e8e8;
+  font-family: 'Inter', sans-serif;
+  margin-top: 1rem;
+}
+
+.icon-frame {
+  width: 50px;
+  height: 50px;
+  background-color: #444446;
+  border-radius: 10px;
+  margin: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.icon-frame span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gold;
+  font-size: 24px;
+  width: 100%;
+  height: 100%;
+}
+
+.contact-title {
+  font-weight: 600;
+}
+
+.contact-email {
+  font-weight: 500;
+}
+
+.right-container {
+  position: relative;
+  flex: 1;
+  height: auto;
+  background-color: #2f2f2f;
+  border-radius: 20px;
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.tab-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.tab-container {
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: #6c6c6c;
+  padding: 0.5rem 1rem;
+}
+
+.tab-navigation {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #e8e8e8;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.tab.active {
+  background-color: #171717;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.social-media {
+margin-top: 2rem;
+display: flex;
+align-items: center; /* Vertically align the buttons */
+gap: 1rem;
+}
+
+.social-button {
+display: inline-block;
+width: 30px; /* Set the width */
+height: 30px; /* Set the height */
+}
+
+.social-button img {
+width: 100%; /* Make the image fill the button */
+height: 100%; /* Make the image fill the button */
+transition: filter 0.3s ease;
+}
+
+.social-button:hover img {
+filter: brightness(1.2); /* Adjust the brightness value as needed */
+}
+
+.card-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 1rem;
+margin-top: 3rem;
+}
+
+.card {
+border-radius: 10px;
+background-color: #2f2f2f;
+color: #e8e8e8;
+}
+
+.card-image {
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+width: 100%;
+height: 140px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 1rem;
+}
+
+.card-title {
+margin-top: 0;
+}
+
+.card-tags {
+margin-top: 0.5rem;
+}
+
+.tag {
+display: inline-block;
+background-color: #e8e8e8;
+color: #333;
+padding: 0.25rem 0.5rem;
+border-radius: 5px;
+margin-right: 0.5rem;
+}
+
+
+.tag-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+.tag-nav-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: red;
+  cursor: pointer;
+}
+
+.tag-nav-item.active {
+  color: #007bff;
+  font-weight: bold;
+}
