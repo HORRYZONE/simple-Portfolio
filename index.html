@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <style>
     html,
     body {
@@ -180,6 +181,30 @@
     .tab-content.active {
       display: block;
     }
+
+    .social-media {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center; /* Vertically align the buttons */
+  gap: 1rem;
+}
+
+.social-button {
+  display: inline-block;
+  width: 30px; /* Set the width */
+  height: 30px; /* Set the height */
+}
+
+.social-button img {
+  width: 100%; /* Make the image fill the button */
+  height: 100%; /* Make the image fill the button */
+  transition: filter 0.3s ease;
+}
+
+.social-button:hover img {
+  filter: brightness(1.2); /* Adjust the brightness value as needed */
+}
+
   </style>
   <title>Responsive Layout</title>
 </head>
@@ -221,15 +246,28 @@
         <div class="contact-container">
           <div class="icon-frame">
             <span class="material-symbols-outlined">
-              smartphone
+              home_pin
               </span>
           </div>
           <div>
             <p class="contact-title">Location</p>
-            <p class="contact-email">Kajang, Selangor</p>
+            <p class="contact-email">Kajang, Selangor</p>   <!-- ignore the class name it's the same style --> 
           </div>
         </div>
       </div>
+      <div class="social-media">
+        <a href="https://example.com" class="social-button">
+          <img src="assets/linkedIn.svg" alt="linkedIn">
+        </a>
+        <a href="https://example.com" class="social-button">
+          <img src="assets/github.svg" alt="github">
+        </a>
+        <a href="https://example.com" class="social-button">
+          <img src="assets/twitter.svg" alt="twitter">
+        </a>
+      </div>
+      
+      
     </div>
     <div class="right-container">
       <div class="tab-overlay">
