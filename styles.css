@@ -56,7 +56,8 @@ body {
 }
 
 .role-container {
-  background-color: #6c6c6c;
+  background: #303030;
+  box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
   padding: 0.01rem 1rem;
   margin-top: 0.1rem;
@@ -91,9 +92,12 @@ body {
 }
 
 .icon-frame {
+
+  background: #303030;
+  box-shadow: 0px 7px 4px 0px rgba(0, 0, 0, 0.25);
   width: 50px;
   height: 50px;
-  background-color: #444446;
+
   border-radius: 10px;
   margin: 0 1.5rem;
   display: flex;
@@ -140,28 +144,11 @@ body {
 .tab-container {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  background-color: #6c6c6c;
+  background-color: #393838;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.25);
   padding: 0.5rem 1rem;
 }
 
-.tab-navigation {
-  display: flex;
-  gap: 0.5rem;
-}
-
-.tab {
-  flex: 1;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  color: #e8e8e8;
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.tab.active {
-  background-color: #171717;
-}
 
 .tab-content {
   display: none;
@@ -170,6 +157,47 @@ body {
 .tab-content.active {
   display: block;
 }
+
+.tab-navigation {
+  display: flex;
+  gap: 0.5rem;
+  width: 700px;
+  height: 50px;
+  position: relative; /* Add this to make the underline relative to the tab container */
+}
+.tab {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: #e8e8e8;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  position: relative; /* Add this to make the underline absolute within the tab */
+  z-index: 1; /* Add this to ensure the text stays above the underline */
+}
+
+/* Add the underline styles for the active tab */
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Set initial width to 0 */
+  height: 2px;
+  background-color: #AD9304; /* Adjust the underline color as needed */
+  border-radius: 2px;
+  transition: width 0.3s ease; /* Add the transition effect */
+}
+
+.tab.active:hover::after {
+  width: calc(100% - 20px); /* Adjust 20px based on the desired padding or spacing between underline and tab edges */
+  color: red;
+}
+
+
+
 
 .social-media {
 margin-top: 2rem;
@@ -197,7 +225,7 @@ filter: brightness(1.2); /* Adjust the brightness value as needed */
 .card-grid {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-gap: 1rem;
+grid-gap: 10rem;
 margin-top: 3rem;
 }
 
@@ -208,10 +236,9 @@ color: #e8e8e8;
 }
 
 .card-image {
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
+border-radius: 10px;
 width: 100%;
-height: 140px;
+height: 225px;
 object-fit: cover;
 }
 
@@ -254,4 +281,48 @@ margin-right: 0.5rem;
 .tag-nav-item.active {
   color: #007bff;
   font-weight: bold;
+}
+
+.tab-content.active[data-tab="about-content"] {
+display: block;
+}
+
+/* Typewriter effect styles */
+#typewriter-container {
+font-size: 24px;
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+color: #e8e8e8;
+border-right: 2px solid #e8e8e8;
+padding-right: 8px;
+display: inline-block;
+margin-top: 50px;
+margin-left: 10px;
+}
+
+.typewriter-cursor {
+display: inline-block;
+width: 8px;
+height: 25px;
+background-color: #e8e8e8;
+animation: blink 0.7s infinite;
+margin-left: 5px;
+}
+
+@keyframes blink {
+0%, 100% {
+  opacity: 0;
+}
+50% {
+  opacity: 1;
+}
+}
+
+.tab-content.active[data-tab="about-content"] h3 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300; /* Use Inter Light (font weight 300) */
+  font-size: 18px;
+  color: #cacaca;
+  word-spacing: 1%;
+  text-align: left;
 }

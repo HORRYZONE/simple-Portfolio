@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+<link rel="stylesheet" href="styles.css">
   <title>Responsive Layout</title>
 </head>
 
@@ -83,14 +83,59 @@
           </div>
         </div>
       </div>
-      <div class="tab-content" id="about-content"></div>
-      <div class="tab-content" id="resume-content"></div>
-      <div class="tab-content" id="portfolio-content"></div>
-      <div class="tab-content" id="contact-content"></div>
+      <div class="tab-content active" data-tab="about-content">
+        <div id="typewriter-container">Hi, I'm Danish</div>
+        <div><h3>Welcome to my corner of the web. I'm a passionate developer with a love for turning ideas into 
+          reality through code. My journey in the world of technology  has been an exciting one, filled with 
+          learning and growth.</h3></div>
+        <div id="intro2"><h3>I believe in the power of innovation and its ability to create positive change. 
+          Whether it's crafting elegant websites, building robust applications, or exploring the latest tech trends,
+           I'm always eager to embrace new challenges.</h3></div>
+        
+      </div>      
+      <div class="tab-content" data-tab="resume-content">Resume content</div>
+      <div class="tab-content" data-tab="portfolio-content">
+        <div class="tag-nav">
+          <div class="tag-nav-item active" data-tag="all">All</div>
+          <div class="tag-nav-item" data-tag="tag1">Tag 1</div>
+          <div class="tag-nav-item" data-tag="tag2">Tag 2</div>
+          <div class="tag-nav-item" data-tag="tag3">Tag 3</div>
+        </div>
+        <div class="card-grid">
+          <div class="card">
+            <a href="new-page.html">
+              <img src="assets/card-image.jpg" alt="Card Image" class="card-image">
+            </a>
+            <div class="card-content">
+              <h3 class="card-title">Card Title 1</h3>
+              <div class="card-tags">
+                <span class="tag">Tag 1</span>
+                <span class="tag">Tag 2</span>
+                <span class="tag">Tag 3</span>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <a href="new-page.html">
+              <img src="card-image-2.jpg" alt="Card Image" class="card-image">
+            </a>
+            <div class="card-content">
+              <h3 class="card-title">Card Title 2</h3>
+              <div class="card-tags">
+                <span class="tag">Tag 1</span>
+                <span class="tag">Tag 2</span>
+                <span class="tag">Tag 3</span>
+              </div>
+            </div>
+          </div>
+          <!-- Add more card elements as needed -->
+        </div>
+      </div>
+      <div class="tab-content" data-tab="contact-content">Contact content</div>
     </div>
   </div>
 
-  <script src="script.js"></script> <!-- Reference to the external JavaScript file -->
+<script src="script.js"></script>
 </body>
 
 </html>
